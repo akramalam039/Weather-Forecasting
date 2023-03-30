@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15B92FDF-8D1C-4A76-A7E5-F2C8F759864B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wheather</RootNamespace>
+    <AssemblyName>Wheather</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All_City_List.cs" />
+    <Compile Include="Country_List.cs" />
+    <Compile Include="Faltu.cs" />
+    <Compile Include="ForeCastUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForeCastUC.Designer.cs">
+      <DependentUpon>ForeCastUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Term_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Term_C.Designer.cs">
+      <DependentUpon>Term_C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weather_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weather_Form.Designer.cs">
+      <DependentUpon>Weather_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_In.Designer.cs">
+      <DependentUpon>Log_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration_Form.Designer.cs">
+      <DependentUpon>Registration_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatherforecast.cs" />
+    <Compile Include="Wheather_info.cs" />
+    <EmbeddedResource Include="ForeCastUC.resx">
+      <DependentUpon>ForeCastUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Term_C.resx">
+      <DependentUpon>Term_C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weather_Form.resx">
+      <DependentUpon>Weather_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_In.resx">
+      <DependentUpon>Log_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registration_Form.resx">
+      <DependentUpon>Registration_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\5-Best-Free-and-Paid-Weather-APIs-2019-e1587582023501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\5-Best-Free-and-Paid-Weather-APIs-2019-e1587582023501.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\4092559_search_magnifier_mobile ui_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\4698592_eye_find_view_vision_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\thumb-1920-436350.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\submitbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\resetbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\Check-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Information\Images\Windows-Close-Program-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

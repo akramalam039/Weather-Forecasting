@@ -1,0 +1,9 @@
+My API key:  92c0cde539bb34747d8831fbb67b8439
+Paid API key: 18dede3a5891aa7f0c4f991203e451c0
+
+calling using city
+https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=92c0cde539bb34747d8831fbb67b8439
+
+
+find image of whether
+https://openweathermap.org/img/w/04d.png //here 04d is image id
